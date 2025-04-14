@@ -11,17 +11,10 @@ const MoviePosterList = () => {
   useEffect(() => {
     fetchMovies()
       .then((data) => {
-        console.log('Data:', data);
-        if (data && data.results) {
-          console.log('Data results:', data.results);
-          console.log('Data results length:', data.results.length);
-          setMovies(data.results);
-        } else {
-          console.error('Error: data.results is undefined');
-        }
+        setMovies(data);
       })
       .catch((error) => {
-        console.error('Error:', error);
+        console.error('Error fetching data:', error);
         setError(error);
       });
   }, []);
