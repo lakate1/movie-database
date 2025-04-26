@@ -49,8 +49,8 @@ const MoviePoster = ({ title, description, releaseDate, rating, posterPath }) =>
       <img src={imageUrl} alt={title} />
       <h2>{title}</h2>
       <p>{description}</p>
-      <p>Release Date: {releaseDate}</p>
-      <p>Rating: {rating}</p>
+      <p><strong>Release Date: </strong>{releaseDate}</p>
+      <p><strong>Rating:</strong> {rating}</p>
     </div>
   );
 };
